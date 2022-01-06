@@ -3,7 +3,7 @@ package ch.bbw.pr.savecalculator;
 import junit.framework.TestCase;
 public class SaveCalculatorTest extends TestCase {
 
-    public void testSumme() {
+    public void testSummeZweiPositiveIsOk() {
         SaveCalculator testee = new SaveCalculator();
         int value1 = 10;
         int value2 = 20;
