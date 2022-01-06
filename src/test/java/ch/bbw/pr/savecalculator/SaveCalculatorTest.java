@@ -1,27 +1,37 @@
 package ch.bbw.pr.savecalculator;
 
-import junit.framework.TestCase;
-public class SaveCalculatorTest extends TestCase {
+import org.junit.*;
+import static org.junit.Assert.assertTrue;
 
+public class SaveCalculatorTest {
+
+    private SaveCalculator testee;
+
+
+    @Before
+    public void setUp() {
+        testee = new SaveCalculator();
+    }
+
+    @Test
     public void testSummeZweiPositiveIsOk() {
-        SaveCalculator testee = new SaveCalculator();
         int value1 = 10;
         int value2 = 20;
-        assertEquals(30, testee.summe(value1, value2));
+        assertTrue(testee.summe(value1, value2) == 30);
     }
 
+    @Test
     public void testSummeZweiNegativeIsOk() {
-        SaveCalculator testee = new SaveCalculator();
         int value1 = -10;
         int value2 = -20;
-        assertEquals(-30, testee.summe(value1, value2));
+        assertTrue(testee.summe(value1, value2) == -30);
     }
 
+    @Test
     public void testDifferenzZweiPositivIsOk() {
-        SaveCalculator testee = new SaveCalculator();
         int value1 = 20;
         int value2 = 10;
-        assertEquals(-30, testee.summe(value1, value2));
+        assertTrue(testee.summe(value1, value2) == 10);
     }
-    
+
 }
