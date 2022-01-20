@@ -7,6 +7,7 @@ public class SaveCalculatorTest {
 
     private SaveCalculator testee;
 
+    //Bei Seite 5. Äquivalendklassen
 
     @Before
     public void setUp() {
@@ -34,6 +35,7 @@ public class SaveCalculatorTest {
         assertTrue(testee.subtraktion(value1, value2) == 10);
     }
 
+    //region Exception Tests
     // Ungewollte Exception
     @Test
     public void testSummePositiveAndMaxValueIsOk() {
@@ -48,5 +50,36 @@ public class SaveCalculatorTest {
         int value2 = 10;
         testee.summe(value1, value2);
     }
+    //endregion
+
+    //region Access Modifier Tests
+    //Private Methode: FUNKTIONIERT NICHT -> Warnung bei aufruf der Private Methode
+/*    @Test
+    public void testSummePrivate() {
+        int value1 = 10;
+        int value2 = 20;
+        assertTrue(testee.summePrivate(value1, value2) == 30);
+    }*/
+
+    //Protected Methode: FUNKTIONIERT
+    @Test
+    public void testSummeProtected() {
+        int value1 = 10;
+        int value2 = 20;
+        assertTrue(testee.summeProtected(value1, value2) == 30);
+    }
+
+    //Package Protected Methode: FUNKTIONIERT
+    @Test
+    public void testSummePackageProtected() {
+        int value1 = 10;
+        int value2 = 20;
+        assertTrue(testee.summePackageProtected(value1, value2) == 30);
+    }
+    //endregion
+
+
+
+
 
 }
