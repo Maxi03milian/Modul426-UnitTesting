@@ -5,8 +5,8 @@ package ch.bbw.pr.savecalculator;
  * Rechnet 'vorsichtig' mit Zahlen.
  * Warnt, wenn etwas nicht geht.
  *   
- * @author Peter Rutschmann
- * @version 0.0.1
+ * @author Maximilain Schmid
+ * @version 3.2
  */
 public class SaveCalculator {
 
