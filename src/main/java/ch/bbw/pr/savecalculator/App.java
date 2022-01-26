@@ -2,8 +2,8 @@ package ch.bbw.pr.savecalculator;
 
 /**
  * Application
- * @autor <your name>
- * @version 1.0.0
+ * @autor <Maximilian Schmid>
+ * @version 3.2
  */
 public class App 
 {

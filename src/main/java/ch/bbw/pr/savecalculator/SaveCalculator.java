@@ -5,8 +5,8 @@ package ch.bbw.pr.savecalculator;
  * Rechnet 'vorsichtig' mit Zahlen.
  * Warnt, wenn etwas nicht geht.
  *   
- * @author Peter Rutschmann
- * @version 0.0.1
+ * @author Maximilain Schmid
+ * @version 3.2
  */
 public class SaveCalculator {
 
@@ -44,7 +44,7 @@ public class SaveCalculator {
 		}
 	}
 
-	public double multiplication(Integer value1, Integer value2) {
+	public double multiplication(int value1, int value2) {
 		long value = (long) value1 *  (long) value2;
 		if ((value > Integer.MAX_VALUE) || (value < Integer.MIN_VALUE)){
 			throw new ArithmeticException();
